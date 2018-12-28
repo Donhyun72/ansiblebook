@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-# Adapted from Mark Mandel's implementation
-# https://github.com/ansible/ansible/blob/stable-2.1/contrib/inventory/vagrant.py
+# Mark Mandel의 구현에서 채택
+# https://github.com/ansible/ansible/blob/stable-2.7/contrib/inventory/vagrant.py
+# 라이선스 : GNU General Public License, Version 3 
 
 import argparse
 import json
@@ -19,7 +20,7 @@ def parse_args():
 
 def list_running_hosts():
     cmd = "vagrant status --machine-readable"
-    status = subprocess.check_output(cmd.split()).rstrip()
+    status = subprocess.check_output(cmd.split()).decode('utf-8').rstrip()
     hosts = []
     for line in status.split('\n'):
         (_, host, key, value) = line.split(',')[:4]
@@ -30,7 +31,7 @@ def list_running_hosts():
 
 def get_host_details(host):
     cmd = "vagrant ssh-config {}".format(host)
-    p = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+    p = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, universal_newlines=True)
     config = paramiko.SSHConfig()
     config.parse(p.stdout)
     c = config.lookup(host)
