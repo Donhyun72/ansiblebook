@@ -10,7 +10,7 @@ If you encounter any problems with these samples, please submit a GitHub issue
 or a pull request against this repository.
 
 
-# 테스트 OS  버전 
+# 테스트 OS / 소프트웨어 버전 
 
 ansible 2.7.5
 python 3.7
