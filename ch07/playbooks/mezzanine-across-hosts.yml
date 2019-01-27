@@ -14,7 +14,7 @@
     - secrets.yml
   roles:
     - role: mezzanine
-      database_host: "{{ hostvars.db.ansible_eth1.ipv4.address }}"
+      database_host: "{{ hostvars.db.ansible_enp0s8.ipv4.address }}"
       live_hostname: 192.168.33.10.xip.io
       domains:
         - 192.168.33.10.xip.io

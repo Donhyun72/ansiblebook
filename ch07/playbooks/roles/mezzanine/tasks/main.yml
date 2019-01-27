@@ -14,5 +14,8 @@
     - python-setuptools
     - python-virtualenv
     - supervisor
+    - python3-pip
+    - python3-psycopg2
+
 - include: django.yml
 - include: nginx.yml
