@@ -47,6 +47,7 @@
         - python-setuptools
         - python-virtualenv
         - supervisor
+        - python3-pip
     - name: create project path
       file: path={{ proj_path }} state=directory
     - name: create a logs directory
