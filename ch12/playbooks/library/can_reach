@@ -18,9 +18,9 @@ def main():
         supports_check_mode=True
     )
 
-    # In check mode, we take no action
-    # Since this module never changes system state, we just
-    # return changed=False
+    # check_module은 시스템 상태를 절대로 변경하지 않기 때문에 
+    # check_mode를 사용하면 특별히 할 일은 없다. 
+    # 따라서 changed=False를 리턴만 하면 된다.
     if module.check_mode:
         module.exit_json(changed=False)
 
