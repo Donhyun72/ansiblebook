@@ -17,8 +17,8 @@
       - www.192.168.33.10.xip.io
     repo_url: git@github.com:knight76/mezzanine_example.git
     locale: en_US.UTF-8
-    # Variables below don't appear in Mezannine's fabfile.py
-    # but I've added them for convenience
+    # 아래 변수는 메자닌의 fabfile.py에서는 보이지 않는다.
+    # 그러나 편의상 해당 변수를 추가했다.
     conf_path: /etc/nginx/conf
     tls_enabled: True
     python: "{{ venv_path }}/bin/python"
