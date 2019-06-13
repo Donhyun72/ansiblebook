@@ -1,14 +1,15 @@
 #!/usr/bin/env python
-# A script to set the site domain
-# Assumes two environment variables
+
+# 웹 사이트 도메인을 설정하는 스크립트
+# 세 환경 변수를 사용한다고 가정한다
 #
-# WEBSITE_DOMAIN: the domain of the site (e.g., www.example.com)
-# PROJECT_DIR: root directory of the project
-# PROJECT_APP: name of the project app
+# WEBSITE_DOMAIN: 웹 사이트 도메인 (예, www.example.com)
+# PROJECT_DIR: 프로젝트의 루트 디렉토리
+# PROJECT_APP: 프로젝트 애플리케이션 이름
 import os
 import sys
 
-# Add the project directory to system path
+# 시스템 경로에 프로젝트 디렉토를 추가한다
 proj_dir = os.path.expanduser(os.environ['PROJECT_DIR'])
 sys.path.append(proj_dir)
 
