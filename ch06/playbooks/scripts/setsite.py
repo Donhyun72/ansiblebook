@@ -9,7 +9,7 @@
 import os
 import sys
 
-# 시스템 경로에 프로젝트 디렉토를 추가한다
+# 시스템 경로에 프로젝트 디렉토리를 추가한다
 proj_dir = os.path.expanduser(os.environ['PROJECT_DIR'])
 sys.path.append(proj_dir)
 
